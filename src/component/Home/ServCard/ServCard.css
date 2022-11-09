@@ -17,7 +17,7 @@
     font-weight: 200;
     line-height: 1.75em;
     color: #fff;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .card-body h5 {

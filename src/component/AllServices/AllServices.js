@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
 import "./AllServices.css";
+import ServCard from "../Home/ServCard/ServCard";
 
 const AllServices = () => {
   // const services = useLoaderData();
@@ -19,8 +19,8 @@ const AllServices = () => {
     <div className="w-3/4 mx-auto my-12">
       {spinner ? (
         <>
-          <div class="item spinner h-screen">
-            <div class="loader-pulse"></div>
+          <div className="item spinner h-screen">
+            <div className="loader-pulse"></div>
           </div>
         </>
       ) : (
@@ -32,7 +32,7 @@ const AllServices = () => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 my-12">
             {services.map((service) => (
-              <Card key={service._id} service={service}></Card>
+              <ServCard key={service._id} service={service}></ServCard>
             ))}
           </div>
         </>
