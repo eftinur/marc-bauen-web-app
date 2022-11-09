@@ -3,13 +3,13 @@ import "./WorkExp.css";
 
 const WorkExp = () => {
   return (
-    <div className="w-3/4 mx-auto my-12">
+    <div className="w-3/4 mx-auto my-20">
       <div className="common-title">
         <h2>
           Work <span>Experience</span>
         </h2>
       </div>
-      <div className="work-brief my-9">
+      <div className="work-brief my-12">
         <p>
           Since 2005, I carried out over 90 projects for more than 50 clients
           and partners around the world. We partner with our clients — becoming
@@ -26,7 +26,7 @@ const WorkExp = () => {
           project vision.
         </p>
       </div>
-      <div className="work-exp grid lg:grid-cols-3 text-center">
+      <div className="work-exp grid lg:grid-cols-3 text-center shadow-2xl bg-base-100">
         <div>
           <span>Projects</span>
           <h2>90+</h2>

@@ -6,8 +6,16 @@
     font-weight: 200;
     line-height: 1.75em;
     color: #fff;
+    text-align: justify;
     text-transform: capitalize;
 }
+
+.work-exp {
+    padding: 32px;
+    border-radius: 0.5rem;
+
+}
+
 
 .work-exp span {
     font-family: 'Barlow', sans-serif;
@@ -21,7 +29,7 @@
 
 .work-exp h2 {
     color: #b19777;
-    font-size: 88px;
+    font-size: 72px;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;

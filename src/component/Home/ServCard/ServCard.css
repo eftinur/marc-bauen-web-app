@@ -1,5 +1,5 @@
 .card-body {
-    background-color: #222834;
+    border-radius: 0.5rem;
 }
 
 .card-body h4 {
@@ -7,7 +7,7 @@
     font-size: 25px;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
 }
 
 .card-body p {
@@ -27,4 +27,5 @@
     font-weight: 400;
     letter-spacing: 1px;
 }
+
 
