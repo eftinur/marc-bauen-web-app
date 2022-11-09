@@ -6,9 +6,11 @@ const About = () => {
   return (
     <div className="about w-3/4 mx-auto my-12">
       <div className="about-brief">
+      <div className="common-title">
         <h2>
           About <span>Bauen</span>
         </h2>
+      </div>
         <p>
           A professional, creative and innovative Architect with 10 years
           experience. I provide best-fit architectural solutions for 5 projects

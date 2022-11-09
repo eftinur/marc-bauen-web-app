@@ -8,7 +8,7 @@
     width: 50%;
 }
 
-.about-brief h2 {
+.common-title h2 {
     font-size: 40px;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
@@ -20,7 +20,7 @@
     margin-bottom: 30px;
 }
 
-.about-brief h2  span{
+.common-title h2  span{
     color: #B19777;
 }
 
@@ -44,7 +44,7 @@
 
 .about-wrapper img {
     filter: grayscale();
-    transition: all linear .2s;
+    transition: all ease-in-out .2s;
 }
 
 .about-wrapper img:hover {
