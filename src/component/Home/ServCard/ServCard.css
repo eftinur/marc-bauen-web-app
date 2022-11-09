@@ -1,0 +1,31 @@
+.card-body {
+    background-color: #222834;
+    /* height: 520px; */
+}
+
+.card-body span {
+    color: #b19777;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.card-body p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    line-height: 1.75em;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.card-body h5 {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+

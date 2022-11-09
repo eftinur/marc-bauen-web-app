@@ -1,0 +1,25 @@
+.logo p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 14px;
+    line-height: 1.5rem;
+}
+
+.logo p span{
+    font-family: 'OSwald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    color: #B19777;
+}
+
+.navbar ul li a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 5px 5px;
+}
