@@ -64,7 +64,7 @@ const Registration = () => {
                 </label>
                 <input
                   name="password"
-                  type="text"
+                  type="password"
                   placeholder="Enter your password"
                   className="input input-bordered"
                 />
