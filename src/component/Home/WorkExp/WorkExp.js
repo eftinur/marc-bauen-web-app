@@ -19,7 +19,7 @@ const WorkExp = () => {
           project’s design.
         </p>
         <p>
-          We combine the broad experience and technical depth of a large
+          I combine the broad experience and technical depth of a large
           international firm with the kind of direct, active, personal service
           usually found only in smaller firms. I will seek out the best local
           partners and experts to form teams that can effectively execute a
