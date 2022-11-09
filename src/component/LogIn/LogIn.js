@@ -24,7 +24,6 @@ const LogIn = () => {
     })
   }
     return (
-        <div>
         <div className="hero min-h-screen bg-base-200">
           <div className="hero-content flex-col  lg:w-1/4">
             <div className="text-center lg:text-left">
@@ -65,7 +64,6 @@ const LogIn = () => {
             </div>
           </div>
         </div>
-      </div>
     );
 };
 

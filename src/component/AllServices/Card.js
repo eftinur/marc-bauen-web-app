@@ -9,7 +9,7 @@ const Card = ({service}) => {
                 <h4>{service.title}</h4>
                 <p>{service.brief}</p>
                 <h5>$ {service.price}</h5>
-                <Link className="btn common-btn w-1/3 mt-2">Book now</Link>
+                <Link to={`/services/${service._id}`} className="btn common-btn w-fit mt-2">View Details</Link>
             </div>
         </div>
     );
