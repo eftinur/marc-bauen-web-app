@@ -11,7 +11,7 @@ const WorkExp = () => {
       </div>
       <div className="work-brief my-12">
         <p>
-          Since 2005, I carried out over 90 projects for more than 50 clients
+          Since 2015, I carried out over 90 projects for more than 50 clients
           and partners around the world. We partner with our clients — becoming
           a part of their development team — to understand their vision,
           business objectives, and market opportunities. We consider market,
@@ -36,8 +36,8 @@ const WorkExp = () => {
           <h2>50+</h2>
         </div>
         <div>
-          <span>Work Experience</span>
-          <h2>17+ Years</h2>
+          <span>Experience</span>
+          <h2>7+ Years</h2>
         </div>
       </div>
     </div>

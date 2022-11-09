@@ -14,7 +14,7 @@ const Header = () => {
     .catch(error => {
       console.log(error);
     })
-  }
+  }   
 
   return (
     <div className="navbar w-3/4 p-6 mx-auto">
@@ -78,19 +78,24 @@ const Header = () => {
           <li>
             <Link to="/register">Register</Link>
           </li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        {
+          {
           user ?
           <>
-          <small>{user?.email}</small>
+          <li>
+            <Link to="/myreviews">My reviews</Link>
+          </li>
+          <li>
+            <Link to="/addservices">Add services</Link>
+          </li>
+          <p className="text-xs">{user?.email}</p>
           <Link onClick={handleLogOut} className="btn common-btn ml-4">Log out</Link>
           </>
           :
           <Link to='/login' className="btn common-btn ml-4">Log in</Link>
         }
+        </ul>
       </div>
+     
     </div>
   );
 };
