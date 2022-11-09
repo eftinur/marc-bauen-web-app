@@ -1,5 +1,12 @@
 .work-brief p {
     margin-bottom: 20px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    line-height: 1.75em;
+    color: #fff;
+    text-transform: capitalize;
 }
 
 .work-exp span {

@@ -6,7 +6,7 @@ const WorkExp = () => {
     <div className="w-3/4 mx-auto my-12">
       <div className="common-title">
         <h2>
-          Our <span>Services</span>
+          Work <span>Experience</span>
         </h2>
       </div>
       <div className="work-brief my-9">
