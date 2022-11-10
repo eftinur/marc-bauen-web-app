@@ -20,14 +20,14 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => {
-                    return fetch('http://localhost:5000/services')
+                    return fetch('https://marc-bauen-serv.vercel.app/services')
                 }
             },
             {
                 path: '/home',
                 element: <Home></Home>,
                 loader: () => {
-                    return fetch('http://localhost:5000/services')
+                    return fetch('https://marc-bauen-serv.vercel.app/services')
                 }
             },
             {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
                 path: '/services/:id',
                 element: <ServiceDetails></ServiceDetails>,
                 loader: ({params}) => {
-                    return fetch(`http://localhost:5000/services/${params.id}`)
+                    return fetch(`https://marc-bauen-serv.vercel.app/services/${params.id}`)
                 }
             },
             {

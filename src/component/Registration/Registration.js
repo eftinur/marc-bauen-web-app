@@ -41,7 +41,6 @@ const Registration = () => {
   }
 
   return (
-    <div>
       <div className="hero min-h-screen bg-base-100">
         <div className="hero-content flex-col w-2/4 lg:w-1/4">
           <div className="text-center">
@@ -106,7 +105,6 @@ const Registration = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
