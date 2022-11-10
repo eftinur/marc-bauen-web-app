@@ -8,13 +8,11 @@ const Header = () => {
 
   const handleLogOut = () => {
     logOut()
-    .then({
-
-    })
-    .catch(error => {
-      console.log(error);
-    })
-  }   
+      .then({})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="navbar w-3/4 p-6 mx-auto">
@@ -78,24 +76,30 @@ const Header = () => {
           <li>
             <Link to="/register">Register</Link>
           </li>
-          {
-          user ?
-          <>
-          <li>
-            <Link to="/myreviews">My reviews</Link>
-          </li>
-          <li>
-            <Link to="/addservices">Add services</Link>
-          </li>
-          <p className="text-xs">{user?.email}</p>
-          <Link onClick={handleLogOut} className="btn common-btn ml-4">Log out</Link>
-          </>
-          :
-          <Link to='/login' className="btn common-btn ml-4">Log in</Link>
-        }
+          {user ? (
+            <>
+              <li>
+                <Link to="/myreviews">My reviews</Link>
+              </li>
+              <li>
+                <Link to="/addservices">Add services</Link>
+              </li>
+              <div className="avatar online">
+                <div className="w-12 rounded-full">
+                  <img src={user?.photoURL} title={user.displayName} />
+                </div>
+              </div>
+              <Link onClick={handleLogOut} className="btn common-btn ml-4">
+                Log out
+              </Link>
+            </>
+          ) : (
+            <Link to="/login" className="btn common-btn ml-4">
+              Log in
+            </Link>
+          )}
         </ul>
       </div>
-     
     </div>
   );
 };

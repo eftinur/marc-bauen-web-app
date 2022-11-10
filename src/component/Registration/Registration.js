@@ -4,21 +4,36 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from "../../Context/UserContext/UserContext";
 
 const Registration = () => {
-  const { registerUser } = useContext(AuthContext);
+  const { registerUser, updateUserProfile } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
+    const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
 
     registerUser(email, password)
     .then(userCredential => {
       const user = userCredential.user;
       console.log(user);
+      handleUpdateUserProfile(name, photo);
       form.reset();
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
+
+  const handleUpdateUserProfile = (name, photo) => {
+    const profile = {
+      displayName: name,
+      photoURL: photo
+    }
+    updateUserProfile(profile)
+    .then( () => {
+
     })
     .catch(error => {
       console.log(error);
@@ -42,6 +57,18 @@ const Registration = () => {
                   name="name"
                   type="text"
                   placeholder="Enter your username"
+                  className="input input-bordered"
+                />
+              </div>
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo</span>
+                </label>
+                <input
+                  name="photo"
+                  type="text"
+                  placeholder="Enter your photo URL"
                   className="input input-bordered"
                 />
               </div>

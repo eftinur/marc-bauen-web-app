@@ -1,6 +1,5 @@
 .service-photo {
     overflow: hidden;
-    /* width: 90%; */
 }
 
 .service-photo img {
@@ -12,22 +11,22 @@
 }
 
 .ser-main h3 {
-    font-size: 35px;
+    font-size: 48px;
     font-weight: 300;
     color: #b19777;
     position: relative;
     line-height: 1.25em;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 .service-details p {
     font-family: 'barlow', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 200;
     line-height: 1.75em;
-    color: #999;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -37,7 +36,7 @@
     color: #b19777;
     position: relative;
     line-height: 1.25em;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -51,4 +50,12 @@
     margin-bottom: 15px;
     letter-spacing: 5px;
     text-transform: uppercase;
+}
+
+.textarea {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: none;
 }
