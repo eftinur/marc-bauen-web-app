@@ -58,7 +58,7 @@ const ServiceDetails = () => {
         <h3>{service.title}</h3>
         <PhotoProvider>
         <div className="service-photo w-full shadow-2xl">
-        <PhotoView>
+        <PhotoView src={service.image}>
           <img src={service.image} alt="" />
           </PhotoView>
         </div>
