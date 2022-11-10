@@ -4,6 +4,7 @@ import { AuthContext } from "../../Context/UserContext/UserContext";
 import ReviewDetails from "../ReviewDetails/ReviewDetails";
 import "./ServiceDetails.css";
 import toast, { Toaster } from "react-hot-toast";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceDetails = () => {
   const service = useLoaderData();
@@ -55,9 +56,13 @@ const ServiceDetails = () => {
       <Toaster></Toaster>
       <div className="w-3/4 mx-auto my-16">
         <h3>{service.title}</h3>
+        <PhotoProvider>
         <div className="service-photo w-full shadow-2xl">
+        <PhotoView>
           <img src={service.image} alt="" />
+          </PhotoView>
         </div>
+        </PhotoProvider>
         <div className="service-details mt-9">
           <p>{service.brief}</p>
           <h5>$ {service.price}</h5>
