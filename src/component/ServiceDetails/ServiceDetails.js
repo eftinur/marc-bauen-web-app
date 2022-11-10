@@ -1,24 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/UserContext/UserContext";
+import ReviewDetails from "../ReviewDetails/ReviewDetails";
 import "./ServiceDetails.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const ServiceDetails = () => {
   const service = useLoaderData();
   const { user } = useContext(AuthContext);
-  console.log(user);
 
-//   review API called
+  // order API
+  // fetch(`http://localhost:5000/reviews?email=${user?.email}`)
 
-const [reviews, setReviews] = useState();
-useEffect( () => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
-    .then(res => res.json())
-    .then(data => {
-        setReviews(data);
-        console.log(data);
-    })
-}, [user?.email])
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/reviews")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, [user?.email]);
 
   const handleReviews = (e) => {
     e.preventDefault();
@@ -27,29 +26,35 @@ useEffect( () => {
     const text = form.text.value;
 
     const review = {
-        name: name,
-        photo: user?.photoURL,
-        email: user?.email,
-        service: service._id,
-        serviceName: service.title,
-        reviewText: text,
-    }
-    console.log(review)
+      name: name,
+      photo: user?.photoURL,
+      email: user?.email,
+      service: service._id,
+      serviceName: service.title,
+      reviewText: text,
+    };
 
-    fetch('http://localhost:5000/reviews', {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(review)
+    fetch("http://localhost:5000/reviews", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(review),
     })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          window.location.reload();
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+  const notify = () => toast('Review added successfully')
 
   return (
     <div className="ser-main min-h-screen">
+      <Toaster></Toaster>
       <div className="w-3/4 mx-auto my-16">
         <h3>{service.title}</h3>
         <div className="service-photo w-full shadow-2xl">
@@ -63,11 +68,16 @@ useEffect( () => {
           </Link>
         </div>
       </div>
-      
+
       <div className="review-main w-2/4 mx-auto">
-        <div>
-          <form onSubmit={handleReviews} className="card-body w-full shadow-2xl bg-base-100">
-          <h2 className="text-center">Write a review</h2>
+      
+        {user?.email ? (
+          <>
+              <form
+            onSubmit={handleReviews}
+            className="card-body w-full shadow-2xl bg-base-100"
+          >
+            <h2 className="text-center">Write a review</h2>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Username</span>
@@ -81,24 +91,31 @@ useEffect( () => {
               />
             </div>
             <label className="label mt-6">
-                <span className="label-text">Write a review</span>
-              </label>
+              <span className="label-text">Write a review</span>
+            </label>
             <textarea
-                name="text"
-                className="textarea textarea-bordered "
-              ></textarea>
-             <div className="form-control mt-6 mx-auto">
-              <button className="btn common-btn w-fit">post</button>
+              name="text"
+              className="textarea textarea-bordered "
+            ></textarea>
+            <div className="form-control mt-6 mx-auto">
+              <button onClick={notify} className="btn common-btn w-fit">post</button>
             </div>
           </form>
-        </div>
-
-        <div className="my-6">
-            <h2 className="text-center">See reviews</h2>
-
-            <span>{reviews.length}</span>
-        </div>
-        
+            <div className="mt-12">
+              <h2 className="text-center">See reviews</h2>
+              {reviews.map((review) => (
+                <ReviewDetails key={review._id} review={review}></ReviewDetails>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="text-center  py-16">
+            <h2 className="text-center">Please Login to add a review</h2>
+            <Link to='/login' className="btn common-btn">Log in</Link>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

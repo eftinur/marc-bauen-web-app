@@ -1,0 +1,30 @@
+.reviewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewer span {
+    margin-bottom: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    line-height: 1.75em;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.review-main {
+    padding: 14px 18px;
+}
+
+.review-main h5{
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    line-height: 1.75em;
+    color: #fff;
+    text-transform: capitalize;
+}
