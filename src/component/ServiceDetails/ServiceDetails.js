@@ -42,11 +42,9 @@ const ServiceDetails = () => {
       body: JSON.stringify(review),
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(data => {
         console.log(data);
-        if (data.acknowledged) {
-          window.location.reload();
-        }
+        window.location.reload();
       })
       .catch((err) => console.log(err));
   };

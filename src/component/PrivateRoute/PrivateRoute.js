@@ -1,21 +1,22 @@
 import React, { useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Context/UserContext/UserContext";
 
 const PrivateRoute = ({ children }) => {
   const { user, loader } = useContext(AuthContext);
+  const location = useLocation();
 
-  if (loader) {
+  if(loader) {
     return (
       <div className="item spinner h-screen">
         <div className="loader-pulse"></div>
       </div>
     );
   }
-  if (user) {
+  if(user) {
     return children;
   }
-  return <Navigate to="/login"></Navigate>;
+  return <Navigate to="/login" state={{from: location}} replace></Navigate>;
 };
 
 export default PrivateRoute;

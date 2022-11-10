@@ -14,9 +14,9 @@ const ReviewDetails = ({ review }) => {
         </div>
       </div>
       <h5>{review.serviceName}</h5>
-      <p>{review.reviewText}</p>
-      <Link>Edit</Link>
-      <Link className="ml-4">Delete</Link>
+      <p className="mb-7">{review.reviewText}</p>
+      <Link className="review-btn">Edit</Link>
+      <Link className="review-btn ml-4">Delete</Link>
     </div>
   );
 };
