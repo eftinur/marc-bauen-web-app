@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../../Hooks/useTitle";
 
 const AddServices = () => {
+    useTitle('Add Service')
   const handleAddServices = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -18,19 +20,6 @@ const AddServices = () => {
     };
 
     console.log(newService);
-
-    // fetch("http://localhost:5000/allservices", {
-    //     method: 'POST',
-    //     headers: {
-    //        'content-type': 'application/json'
-    //     },
-    //     body: JSON.stringify(newService)
-    // })
-    // .then(res => res.json()
-    // .then(data => {
-    //     console.log(data)
-    // }))
-
     
     fetch("http://localhost:5000/allservices", {
         method: "POST",
@@ -41,14 +30,14 @@ const AddServices = () => {
       })
       .then(res => res.json())
       .then(data => {
+        form.reset();
         console.log(data);
       })
       .catch(err => console.log(err))
-
   };
   return (
     <div className="hero min-h-screen bg-base-100">
-      <div className="hero-content flex-col w-2/4 lg:w-1/4">
+      <div className="hero-content flex-col sm:w-3/4 md:w-2/4 lg:w-1/4 xl:w-2/4">
         <div className="text-center">
           <h1 className="text-5xl font-bold register-title text-center">
             Add new Service
@@ -104,7 +93,7 @@ const AddServices = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn common-btn">Add</button>
+              <button onSubmit={handleAddServices} className="btn common-btn">Add</button>
             </div>
           </form>
         </div>

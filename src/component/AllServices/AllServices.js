@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./AllServices.css";
 import ServCard from "../Home/ServCard/ServCard";
+import useTitle from "../../Hooks/useTitle";
 
 const AllServices = () => {
+  useTitle('Services')
   // const services = useLoaderData();
   const [services, setServices] = useState();
   console.log(services);

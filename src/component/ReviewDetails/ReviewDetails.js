@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../../Hooks/useTitle";
 import "./ReviewDetails.css";
 
 const ReviewDetails = ({ review }) => {
+  useTitle('Service Details')
   return (
     <div className="review-main w-2/4 mx-auto shadow-2xl bg-base-100 my-6 text-center">
       <div className="reviewer my-4">

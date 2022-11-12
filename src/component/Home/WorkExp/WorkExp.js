@@ -3,7 +3,7 @@ import "./WorkExp.css";
 
 const WorkExp = () => {
   return (
-    <div className="w-3/4 mx-auto my-20">
+    <div className="work-main w-3/4 mx-auto my-20">
       <div className="common-title">
         <h2>
           Work <span>Experience</span>

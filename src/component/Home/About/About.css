@@ -30,7 +30,7 @@
     font-weight: 200;
     line-height: 1.75em;
     color: #fff;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -68,3 +68,41 @@
     background-color: #323232;
 }
 
+
+@media (max-width: 575.98px) {
+    .about {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about-brief {
+        width: 100%;
+    }
+
+    .about-photo {
+        width: 100%;
+    }
+    .about-wrapper {
+        margin: 28px auto;
+    }
+ }
+
+ @media (min-width: 576px) and (max-width: 991.98px) {
+
+    .about {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about-brief {
+        width: 100%;
+    }
+
+    .about-photo {
+        width: 100%;
+    }
+    .about-wrapper {
+        margin: 28px auto;
+    }
+
+}

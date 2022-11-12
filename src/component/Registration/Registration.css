@@ -54,3 +54,12 @@
     color: #000;
     border: none;
 }
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+    .hero-content {
+        width: 60%;
+    }
+}

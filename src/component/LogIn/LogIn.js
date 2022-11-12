@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext/UserContext';
+import useTitle from '../../Hooks/useTitle';
 
 const LogIn = () => {
+  useTitle('Login')
   const { logIn, googleLogIn } = useContext(AuthContext);
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
@@ -43,7 +45,7 @@ const LogIn = () => {
   }
     return (
         <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content flex-col  lg:w-1/4">
+          <div className="hero-content flex-col  sm:w-3/4 md:w-2/4 lg:w-1/4 xl:w-2/4">
             <div className="text-center lg:text-left">
               <h1 className="text-5xl font-bold register-title">Login here</h1>
             </div>

@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import './Registration.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from "../../Context/UserContext/UserContext";
+import useTitle from "../../Hooks/useTitle";
 
 const Registration = () => {
+  useTitle('Register');
   const { registerUser, updateUserProfile } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
@@ -42,7 +44,7 @@ const Registration = () => {
 
   return (
       <div className="hero min-h-screen bg-base-100">
-        <div className="hero-content flex-col w-2/4 lg:w-1/4">
+        <div className="hero-content flex-col sm:w-3/4 md:w-2/4 lg:w-1/4 xl:w-2/4">
           <div className="text-center">
             <h1 className="text-5xl font-bold register-title text-center">Register here</h1>
           </div>

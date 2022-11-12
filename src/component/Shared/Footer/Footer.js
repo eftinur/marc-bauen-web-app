@@ -13,7 +13,7 @@ const Footer = () => {
             </p>
           </div>
         </Link>
-        <p>Copyright © 2022 - All right reserved</p>
+        <p className="text-center">Copyright © 2022 - All right reserved</p>
       </div>
       {/* <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a>
